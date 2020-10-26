@@ -14,6 +14,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
     private static final String TAG = "authInfo";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,3 +39,17 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 
 }
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        }, 4000);
+    }
+
+
+
+
+}
+
