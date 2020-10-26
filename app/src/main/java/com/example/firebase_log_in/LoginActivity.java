@@ -1,76 +1,58 @@
 package com.example.firebase_log_in;
 
+import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-
-
-public class LoginActivity extends Activity implements View.OnClickListener{
-
+public class LogInActivity extends AppCompatActivity implements View.OnClickListener{
     private FirebaseAuth mAuth;
-    private TextView authStatus;
-    private EditText authEmail;
-    private EditText authPassword;
-    private Button authLogin;
-    private Button authSignup;
-
-    private static final String TAG = "authInfo";
+    private static final String TAG = "loginInfo";
+    private EditText username;
+    private EditText password;
+    private TextView showPass;
+    private Button btn_login;
+    private Boolean showPassword = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        mAuth = FirebaseAuth.getInstance();
-        authStatus = (TextView) findViewById(R.id.auth_status);
-        authEmail = (EditText) findViewById(R.id.auth_email);
-        authPassword = (EditText) findViewById(R.id.auth_password);
-        authLogin = (Button) findViewById(R.id.auth_login);
-        authLogin.setOnClickListener(this);
-        authSignup = (Button) findViewById(R.id.auth_signup);
-        authSignup.setOnClickListener(this);
+        username = (EditText) findViewById(R.id.txt_login_username);
+        password = (EditText) findViewById(R.id.txt_login_password);
+        btn_login = (Button) findViewById(R.id.btn_login);
+        btn_login.setOnClickListener(this);
+        showPass = (TextView) findViewById(R.id.show_pass);
+        showPass.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()){
-            case R.id.auth_signup:
-                createAccount(authEmail.getText().toString(), authPassword.getText().toString());
+        switch(v.getId()) {
+            case R.id.btn_login:
+                signIn(username.getText().toString(), password.getText().toString());
                 break;
-            case R.id.auth_login:
-                signIn(authEmail.getText().toString(), authPassword.getText().toString());
-                break;
+            case R.id.show_pass:
+                showPassword = !showPassword;
+                if (showPassword){
+                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                } else{
+                    password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }
         }
-    }
-
-    private void createAccount(String email, String password) {
-        //if not sfu return
-        Log.d(TAG, "createAccount:" + email);
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            authStatus.setText("Signed up");
-                            Log.d(TAG, "createAccount success");
-
-                        } else {
-                            authStatus.setText("Failed to Sign up");
-                            Log.d(TAG, "createAccount failed");
-
-                        }
-                    }
-                });
     }
 
     private void signIn(String email, String password) {
@@ -80,13 +62,12 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            authStatus.setText("Logged in");
+                            Toast.makeText(getApplicationContext(), "Logged in!", Toast.LENGTH_SHORT).show();
                         } else {
-                            authStatus.setText("Failed to log in");
+                            Toast.makeText(getApplicationContext(), "Failed to Log in", Toast.LENGTH_SHORT).show();
+
                         }
                     }
                 });
     }
 }
-
-//
