@@ -42,11 +42,11 @@
                 android:id="@+id/txt_login_username"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:paddingLeft="10dp"
                 android:background="@drawable/auth_input"
-                android:hint="Username / Email" />
+                android:hint="Username / Email"
+                android:paddingLeft="10dp" />
 
-<RelativeLayout
+            <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="15dp">
