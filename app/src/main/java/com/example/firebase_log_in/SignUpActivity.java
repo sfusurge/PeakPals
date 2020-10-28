@@ -35,7 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
 
         if(fAuth.getCurrentUser()!=null){
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), HomeScreen.class));
             finish();
         }
         sign_up.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class SignUpActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(SignUpActivity.this, "User Created", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), HomeScreen.class));
                         }else{
                             Toast.makeText(SignUpActivity.this, "Error " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }

@@ -1,5 +1,6 @@
 package com.example.firebase_log_in;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btn_login.setOnClickListener(this);
         showPass = (TextView) findViewById(R.id.show_pass);
         showPass.setOnClickListener(this);
+        mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -58,13 +60,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void signIn(String email, String password) {
 
         mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Logged in!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Logged in!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), HomeScreen.class));
                         } else {
-                            Toast.makeText(getApplicationContext(), "Failed to Log in", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Failed to Log in", Toast.LENGTH_SHORT).show();
 
                         }
                     }
