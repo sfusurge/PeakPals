@@ -1,5 +1,6 @@
 package com.example.firebase_log_in;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -18,7 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class LogInActivity extends AppCompatActivity implements View.OnClickListener{
     private FirebaseAuth mAuth;
     private static final String TAG = "loginInfo";
     private EditText username;
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btn_login.setOnClickListener(this);
         showPass = (TextView) findViewById(R.id.show_pass);
         showPass.setOnClickListener(this);
+        mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -58,13 +60,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void signIn(String email, String password) {
 
         mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Logged in!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LogInActivity.this, "Logged in!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), HomeScreen.class));
                         } else {
-                            Toast.makeText(getApplicationContext(), "Failed to Log in", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LogInActivity.this, "Failed to Log in", Toast.LENGTH_SHORT).show();
 
                         }
                     }
