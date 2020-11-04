@@ -7,4 +7,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NavBar">
+        <item name="android:background">@color/colorNavBackground</item>
+        <item name="android:icon">@color/colorNavBackground</item>
+
+
+
+    </style>
+
 </resources>
