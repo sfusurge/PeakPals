@@ -39,7 +39,8 @@ public class AddingEvent extends AppCompatActivity {
                  String time = eventTime.getText().toString();
 
                  EventHelperClass Eventclass = new EventHelperClass (title,date,time);
-                 reference.setValue(Eventclass);
+                 reference.child(title).setValue(Eventclass);
+
              }
          });
          
