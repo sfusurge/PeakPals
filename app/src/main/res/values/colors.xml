@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF1654</color>
-    <color name="colorPrimaryDark">#171C1A</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBackground">#F4F4F4</color>
+    <color name="colorProfileText">#333333</color>
+    <color name="colorBlue">#247BA0</color>
+    <color name="colorMainPink">#FF1654</color>
+    <color name="colorTeal">#70C1B3</color>
     <color name="colorNavBackground">#E1E1E1</color>
+    <color name="colorEventGrid">#F5698E</color>
+    <color name="colorHintText">#5B5B5B</color>
+
+    <color name="D_colorBackground">#171C1A</color>
+    <color name="D_colorProfileText">#FFFFFF</color>
+    <color name="D_colorBlue">#247BA0</color>
+    <color name="D_colorMainPink">#FF1654</color>
+    <color name="D_colorTeal">#70C1B3</color>
+    <color name="D_colorNavBackground">#1C211F</color>
+    <color name="D_colorEventGrid">#F5698E</color>
+    <color name="D_colorHintText">#5B5B5B</color>
 </resources>

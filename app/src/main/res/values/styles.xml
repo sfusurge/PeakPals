@@ -1,18 +1,42 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="LightTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorBackground">@color/colorBackground</item>
+        <item name="colorProfileText">@color/colorProfileText</item>
+        <item name="MainPink"> @color/colorMainPink</item>
+        <item name="EventGrid"> @color/colorEventGrid</item>
+        <item name="colorHintText">@color/colorHintText</item>
+        <item name="ProfileBackground">@drawable/ic_profile_background</item>
+        <item name="NavBackground">@color/colorNavBackground</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorBackground">@color/D_colorBackground</item>
+        <item name="colorProfileText">@color/D_colorProfileText</item>
+        <item name="MainPink"> @color/colorMainPink</item>
+        <item name="EventGrid"> @color/colorEventGrid</item>
+        <item name="colorHintText">@color/colorHintText</item>
+        <item name="ProfileBackground">@drawable/ic_profile_dark_background</item>
+        <item name="NavBackground">@color/D_colorNavBackground</item>
     </style>
 
     <style name="NavBar">
-        <item name="android:background">@color/colorNavBackground</item>
+        <item name="android:background">?attr/NavBackground</item>
         <item name="android:icon">@color/colorNavBackground</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="itemIconTint">@color/colorMainPink</item>
+        <item name="menu">@menu/navigation_menu</item>
+    </style>
 
+    <style name="LoginEditText">
+        <item name="android:paddingLeft">13dp</item>
+        <item name="android:background">@drawable/auth_input</item>
+        <item name="android:textColorHint">?attr/colorHintText</item>
+        <item name="android:textColor">?attr/colorProfileText</item>
+    </style>
 
-
+    <style name="ProfileText">
+        <item name="android:textColor">?attr/colorProfileText</item>
     </style>
 
 </resources>

@@ -6,11 +6,11 @@
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_nav_home_true"
         android:enabled="true"
-        android:title="Home"/>
+        android:title="" />
 
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_nav_profile_false"
         android:enabled="true"
-        android:title="Profile"/>
+        android:title=""/>
 </menu>

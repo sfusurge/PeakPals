@@ -9,11 +9,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeScreen extends AppCompatActivity {
+    private boolean isDark = false;
     private BottomNavigationView navBar;
 
     @Override
@@ -65,4 +67,17 @@ public class HomeScreen extends AppCompatActivity {
                     return true;
                 }
             };
+
+    public void switchTheme(){
+        if (isDark){
+            Toast.makeText(this, "button working!!!", Toast.LENGTH_SHORT).show();
+//            setTheme(R.style.LightTheme);
+//            isDark = false;
+        } else{
+//            setTheme(R.style.DarkTheme);
+//            isDark = true;
+        }
+    }
+
+
 }
