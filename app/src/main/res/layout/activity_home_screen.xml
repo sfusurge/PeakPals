@@ -16,14 +16,13 @@
 
 
 <!--    Nagivation bar-->
+    <!--this is the same nav bar, duplicated code here so design is easier-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         style="@style/NavBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemIconTint="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
         android:id="@+id/sign_out_btn"
