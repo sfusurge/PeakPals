@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorBackground" format="reference"/>
+    <attr name="colorProfileText" format="reference"/>
+    <attr name="MountainBlue" format="reference"/>
+    <attr name="MainPink" format="reference"/>
+    <attr name="ProfileTeal" format="reference"/>
+    <attr name="colorNavBackground" format="reference"/>
+    <attr name="EventGrid" format="reference"/>
+    <attr name="colorHintText" format="reference"/>
+    <attr name="ProfileBackground" format="reference"/>
+    <attr name="NavBackground" format="reference"/>
+    <attr name="ProfileTheme" format="reference"/>
+</resources>
