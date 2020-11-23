@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">firebase_log_in</string>
     <string name="peak_pals">Peak Pals</string>
+    <string name="welcome_message"> Hi USERNAME &#128075;</string>
+    <string name="calendar_emoji"> &#x1F4C5;</string>
+    <string name="fire_emoji"> &#128293;</string>
+    <string name="game_emoji"> &#127918;</string>
+    <string name="study_emoji">&#128218;</string>
+    <string name="outdoors_emoji">&#127794;</string>
+
+
 
 </resources>

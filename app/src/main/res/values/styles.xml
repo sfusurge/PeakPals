@@ -15,7 +15,7 @@
         <item name="colorBackground">@color/D_colorBackground</item>
         <item name="colorProfileText">@color/D_colorProfileText</item>
         <item name="MainPink"> @color/colorMainPink</item>
-        <item name="EventGrid"> @color/colorEventGrid</item>
+        <item name="EventGrid"> @color/D_colorEventGrid</item>
         <item name="colorHintText">@color/colorHintText</item>
         <item name="ProfileBackground">@drawable/ic_profile_dark_background</item>
         <item name="NavBackground">@color/D_colorNavBackground</item>
