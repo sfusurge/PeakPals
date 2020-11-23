@@ -10,4 +10,5 @@
     <attr name="colorHintText" format="reference"/>
     <attr name="ProfileBackground" format="reference"/>
     <attr name="NavBackground" format="reference"/>
+    <attr name="ProfileTheme" format="reference"/>
 </resources>

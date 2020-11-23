@@ -8,6 +8,7 @@
         <item name="colorHintText">@color/colorHintText</item>
         <item name="ProfileBackground">@drawable/ic_profile_background</item>
         <item name="NavBackground">@color/colorNavBackground</item>
+        <item name="ProfileTheme">@drawable/ic_profile_darkmode</item>
     </style>
 
     <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
