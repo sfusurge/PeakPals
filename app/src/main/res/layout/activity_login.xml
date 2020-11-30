@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_login_background">
+    android:background="?attr/imgLoginBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="26"
-            app:srcCompat="@drawable/ic_login_logo"
+            app:srcCompat="?attr/imgLoginLogo"
             />
 
         <LinearLayout
@@ -88,6 +88,28 @@
                 android:text="Log in"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don’t have an account? "
+                    android:textColor="?attr/colorText"
+                    android:textSize="14dp"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/txt_login_toSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up!"
+                    android:textColor="?attr/colorMainPink"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
 
         </LinearLayout>
         </LinearLayout>

@@ -25,6 +25,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText username;
     private EditText password;
     private TextView showPass;
+    private TextView toSignUp;
     private Button btn_login;
     private Boolean showPassword = false;
 
@@ -39,6 +40,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         showPass = (TextView) findViewById(R.id.show_pass);
         showPass.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
+        toSignUp = findViewById(R.id.txt_login_toSignUp);
+        toSignUp.setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +57,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 } else{
                     password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                 }
+            case R.id.txt_login_toSignUp:
+                Intent i_signUp = new Intent(this, SignUpActivity.class);
+                startActivity(i_signUp);
+                break;
         }
     }
 

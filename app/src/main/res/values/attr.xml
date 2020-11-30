@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    colors-->
     <attr name="colorBackground" format="reference"/>
-    <attr name="colorProfileText" format="reference"/>
-    <attr name="MountainBlue" format="reference"/>
-    <attr name="MainPink" format="reference"/>
-    <attr name="ProfileTeal" format="reference"/>
+    <attr name="colorText" format="reference"/>
+    <attr name="colorMountainBlue" format="reference"/>
+    <attr name="colorMainPink" format="reference"/>
+    <attr name="colorProfileTeal" format="reference"/>
     <attr name="colorNavBackground" format="reference"/>
-    <attr name="EventGrid" format="reference"/>
     <attr name="colorHintText" format="reference"/>
+    <attr name="colorEditText" format="reference"/>
+
+<!--    login page-->
+    <attr name="imgLoginLogo" format="reference"/>
+    <attr name="imgLoginBackground" format="reference"/>
+
+<!--    sign up page-->
+    <attr name="imgSignUpLogo" format="reference"/>
+
+    <!--    profile page-->
     <attr name="ProfileBackground" format="reference"/>
-    <attr name="NavBackground" format="reference"/>
-    <attr name="ProfileTheme" format="reference"/>
+    <attr name="ThemeToggleIcon" format="reference"/>
+
+    <!--    event page-->
+    <attr name="EventGrid" format="reference"/>
+
 </resources>
