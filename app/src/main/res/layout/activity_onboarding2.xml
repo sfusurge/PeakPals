@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/imgLoginBackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_weight="75"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="73"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="26"
+                android:background="@drawable/ic_onboard_2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:layout_marginTop="18dp"
+
+                android:text="Attend Events 🎉 "
+                android:textColor="?attr/colorText"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:layout_marginTop="18dp"
+                android:textSize="16dp"
+                android:text="Interested in joining a club? Looking for a study buddy? Look through all of today’s events and find your next Peak Pal!"
+                android:textColor="?attr/colorText"/>
+            <Button
+                android:id="@+id/btn_onboard_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:layout_marginTop="22dp"
+                android:text="Next"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/auth_button" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="90dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_onboard2_back"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textSize="12dp"
+                    android:textColor="?attr/colorText"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="12dp"
+                    app:srcCompat="@drawable/ic_onboard_dot2"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/tv_onboard_2skip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Skip All"
+                    android:textSize="12dp"
+                    android:textColor="?attr/colorText"
+                    android:layout_weight="1"
+                    android:gravity="right"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

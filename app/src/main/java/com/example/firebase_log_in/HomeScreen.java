@@ -21,6 +21,7 @@ public class HomeScreen extends AppCompatActivity {
     private SharedPreferences sharedPrefs;
     private boolean isDark = false;
     private BottomNavigationView navBar;
+    private int page;
     Button signUp;
 
     @Override
@@ -40,25 +41,28 @@ public class HomeScreen extends AppCompatActivity {
         navBar = findViewById(R.id.bottom_navigation);
         navBar.setOnNavigationItemSelectedListener(navListener);
 
-        int page = sharedPrefs.getInt("Fragment", 0);
+        page = sharedPrefs.getInt("Fragment", 0);
         if (page == 0){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
         } else if (page == 1){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new ProfileFragment()).commit();
+        } else if (page == 2){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new SearchFragment()).commit();
         }
-
+        setIcons();
         
-        signUp = findViewById(R.id.eventnew);
-        signUp.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), AddingEvent.class));
-                finish();
-            }
-        });
+//        signUp = findViewById(R.id.eventnew);
+//        signUp.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), AddingEvent.class));
+//                finish();
+//            }
+//        });
     }
 
 
@@ -68,6 +72,24 @@ public class HomeScreen extends AppCompatActivity {
         finish();
     }
 
+    private void setIcons(){
+        Menu menu = navBar.getMenu();
+        menu.findItem(R.id.nav_profile).setIcon(R.drawable.ic_nav_profile_false);
+        menu.findItem(R.id.nav_home).setIcon(R.drawable.ic_nav_home_false);
+        menu.findItem(R.id.nav_search).setIcon(R.drawable.ic_nav_search_false);
+        switch(page){
+            case 0:
+                menu.findItem(R.id.nav_home).setIcon(R.drawable.ic_nav_home_true);
+                break;
+            case 1:
+                menu.findItem(R.id.nav_profile).setIcon(R.drawable.ic_nav_profile_true);
+                break;
+            case 2:
+                menu.findItem(R.id.nav_search).setIcon(R.drawable.ic_nav_search_true);
+                break;
+
+        }
+    }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -75,26 +97,31 @@ public class HomeScreen extends AppCompatActivity {
                     Fragment selectedFragment = null;
                     SharedPreferences sharedPrefs = getSharedPreferences("Setting", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPrefs.edit();
-                    int page = 0;
                     //set icons back to default
 
                     Menu menu = navBar.getMenu();
-                    menu.findItem(R.id.nav_profile).setIcon(R.drawable.ic_nav_profile_false);
-                    menu.findItem(R.id.nav_home).setIcon(R.drawable.ic_nav_home_false);
-
+//                    menu.findItem(R.id.nav_profile).setIcon(R.drawable.ic_nav_profile_false);
+//                    menu.findItem(R.id.nav_home).setIcon(R.drawable.ic_nav_home_false);
+//                    menu.findItem(R.id.nav_search).setIcon(R.drawable.ic_nav_search_false);
 
                     switch (item.getItemId()){
                         case R.id.nav_profile:
-                            selectedFragment = new ProfileFragment();
-                            item.setIcon(R.drawable.ic_nav_profile_true);
+                            selectedFragment = new SignUpActivity();
+//                            item.setIcon(R.drawable.ic_nav_profile_true);
                             page = 1;
+                            break;
+                        case R.id.nav_search:
+                            selectedFragment = new SearchFragment();
+//                            item.setIcon(R.drawable.ic_nav_search_true);
+                            page = 2;
                             break;
                         case R.id.nav_home:
                             selectedFragment = new HomeFragment();
-                            item.setIcon(R.drawable.ic_nav_home_true);
+//                            item.setIcon(R.drawable.ic_nav_home_true);
                             page = 0;
                             break;
                     }
+                    setIcons();
                     editor.putInt("Fragment", page);
                     editor.apply();
                     getSupportFragmentManager().beginTransaction().replace

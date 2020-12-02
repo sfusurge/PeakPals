@@ -7,6 +7,9 @@
         <item name="colorHintText">@color/colorHintText</item>
         <item name="colorNavBackground">@color/colorNavBackground</item>
         <item name="colorEditText">@color/colorEditText</item>
+        <item name="android:editTextColor">@color/colorHintText</item>
+        <item name="android:textColorHint">@color/colorHintText</item>
+        <item name="android:textColor">@color/colorProfileText</item>
         <item name="ProfileBackground">@drawable/ic_profile_background</item>
         <item name="EventGrid"> @color/colorEventGrid</item>
         <item name="ThemeToggleIcon">@drawable/ic_profile_darkmode</item>
@@ -50,4 +53,9 @@
         <item name="android:textColor">?attr/colorText</item>
     </style>
 
+    <style name="EventGrid">
+        <item name="android:layout_width">282dp</item>
+        <item name="android:layout_height">146dp</item>
+        <item  name="android:layout_weight">1</item>
+    </style>
 </resources>

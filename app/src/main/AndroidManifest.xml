@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
+        <activity android:name=".Onboard1Activity" />
+        <activity android:name=".Onboard2Activity" />
         <activity android:name=".LandingActivity" />
     </application>
 

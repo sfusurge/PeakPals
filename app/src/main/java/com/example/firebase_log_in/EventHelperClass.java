@@ -1,15 +1,16 @@
 package com.example.firebase_log_in;
 
 public class EventHelperClass {
-    String title, date, time;
+    String title, date, time, type;
 
     public EventHelperClass() {
     }
 
-    public EventHelperClass(String title, String date, String time) {
+    public EventHelperClass(String title, String date, String time, String type) {
         this.title = title;
         this.date = date;
         this.time = time;
+        this.type = type;
     }
 
     public String getTitle() {
@@ -34,5 +35,13 @@ public class EventHelperClass {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
