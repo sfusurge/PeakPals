@@ -37,7 +37,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.among_us:
-                startActivity(new Intent(getActivity(), AmongUsActivity.class));
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new AmongUsActivity()).commit();
                 break;
         }
     }
