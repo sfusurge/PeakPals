@@ -23,6 +23,10 @@
         <activity android:name=".Onboard1Activity" />
         <activity android:name=".Onboard2Activity" />
         <activity android:name=".LandingActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

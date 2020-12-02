@@ -16,6 +16,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"/>
+<!--        <Button-->
+<!--            android:id="@+id/sign_out_btn"-->
+<!--            android:layout_width="114dp"-->
+<!--            android:layout_height="61dp"-->
+<!--            android:background="@drawable/auth_button"-->
+<!--            android:fontFamily="@font/permanent_marker"-->
+<!--            android:text="Sign Out"-->
+<!--            android:textColor="#FCFCFB"-->
+<!--            android:textSize="18sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.498"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.898"-->
+<!--            android:onClick="logout"/>-->
 
 
         <HorizontalScrollView
@@ -163,6 +179,20 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.25" />
 
+                <TextView
+                    android:layout_width="16dp"
+                    android:layout_height="151dp"
+                    android:elevation="100dp"
+                    android:fontFamily="@font/asap_medium"
+                    android:textColor="?attr/colorText"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.182"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.329" />
+
 
 
 <!--                <TextView-->
@@ -254,7 +284,7 @@
             android:layout_height="27dp"
             android:ems="10"
             android:fontFamily="@font/asap_medium"
-            android:text="Here's what's happening near you."
+            android:text="Here's what's happening today on SFU."
             android:textColor="?attr/colorText"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -297,7 +327,67 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.508" />
 
+    <Button
+        android:id="@+id/among_us"
+        android:layout_width="340dp"
+        android:layout_height="194dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/amongus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.695" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="337dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:textColor="#247BA0"
+        android:textSize="15sp"
+        android:text="GAMING"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.811" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="337dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:text="Among Us With SFU Surge"
+        android:textColor="?attr/colorText"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="337dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:textColor="?attr/colorText"
+        android:textSize="15sp"
+        android:text="3hrs 21min until event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
