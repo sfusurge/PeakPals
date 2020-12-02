@@ -54,35 +54,69 @@ public class SearchResultFragment extends Fragment implements View.OnClickListen
             }
         });
         databaseReference = FirebaseDatabase.getInstance().getReference("Event");
-        Query eventQuery = databaseReference.child(type).child(name);
+        Query eventQuery;
+        if (!name.isEmpty()){
+            eventQuery = databaseReference.child(type).child(name);
+            eventQuery.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    int count = 0;
+                    for (DataSnapshot events: dataSnapshot.getChildren()) {
+                        EventHelperClass event = events.getValue(EventHelperClass.class);
+                        View view = getActivity().getLayoutInflater().inflate(R.layout.search_event_grid, layout);
+                        view = view.findViewById(R.id.search_grid);
+                        view.setId(count);
+                        count++;
 
-        eventQuery.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                int count = 0;
-                for (DataSnapshot events: dataSnapshot.getChildren()) {
-                    EventHelperClass event = events.getValue(EventHelperClass.class);
-                    View view = getActivity().getLayoutInflater().inflate(R.layout.search_event_grid, layout);
-                    view = view.findViewById(R.id.search_grid);
-                    view.setId(count);
-                    count++;
-
-                    TextView eventName = view.findViewById(R.id.eventName);
-                    TextView eventDate = view.findViewById(R.id.eventDate);
-                    TextView eventTime = view.findViewById(R.id.eventTime);
-                    TextView eventType = view.findViewById(R.id.eventType);
-                    eventName.setText(event.getTitle());
-                    eventDate.setText(event.getDate());
-                    eventTime.setText(event.getTime());
-                    eventType.setText(event.getType());
+                        TextView eventName = view.findViewById(R.id.eventName);
+                        TextView eventDate = view.findViewById(R.id.eventDate);
+                        TextView eventTime = view.findViewById(R.id.eventTime);
+                        TextView eventType = view.findViewById(R.id.eventType);
+                        eventName.setText(event.getTitle());
+                        eventDate.setText(event.getDate());
+                        eventTime.setText(event.getTime());
+                        eventType.setText(event.getType());
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
+                }
+            });
+        }else{
+            eventQuery = databaseReference.child(type);
+            eventQuery.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    int count = 0;
+                    for (DataSnapshot allEvents : dataSnapshot.getChildren()) {
+                        for (DataSnapshot events : allEvents.getChildren()) {
+
+                            EventHelperClass event = events.getValue(EventHelperClass.class);
+                            View view = getActivity().getLayoutInflater().inflate(R.layout.search_event_grid, layout);
+                            view = view.findViewById(R.id.search_grid);
+                            view.setId(count);
+                            count++;
+
+                            TextView eventName = view.findViewById(R.id.eventName);
+                            TextView eventDate = view.findViewById(R.id.eventDate);
+                            TextView eventTime = view.findViewById(R.id.eventTime);
+                            TextView eventType = view.findViewById(R.id.eventType);
+                            eventName.setText(event.getTitle());
+                            eventDate.setText(event.getDate());
+                            eventTime.setText(event.getTime());
+                            eventType.setText(event.getType());
+                        }
+                    }
+                }
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+        }
+
     }
 //
     @Override
