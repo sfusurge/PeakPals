@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AmongUsActivity"
+    android:background="?attr/colorBackground">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="409dp"
+        android:layout_height="275dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/amongus" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="116dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336"
+        app:srcCompat="@drawable/calendar" />
+
+    <TextView
+        android:layout_width="337dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:textColor="#247BA0"
+        android:textSize="15sp"
+        android:text="20 GOING"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <TextView
+        android:layout_width="337dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:text="Among Us With SFU Surge"
+        android:textColor="?attr/colorText"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.489" />
+
+    <TextView
+        android:layout_width="337dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:textColor="?attr/colorText"
+        android:textSize="15sp"
+        android:text="3hrs 21min until event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.525" />
+
+    <TextView
+        android:layout_width="332dp"
+        android:layout_height="75dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:text="Come play Among Us with the Executive Team of SFU Surge! Afterwards we’ll be talking about the club and what we do."
+        android:textColor="?attr/colorText"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.61" />
+
+    <TextView
+        android:layout_width="337dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:textColor="?attr/colorText"
+        android:textSize="15sp"
+        android:text="Location: Zoom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.665" />
+
+
+    <TextView
+        android:layout_width="337dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:textColor="#247BA0"
+        android:textSize="15sp"
+        android:text="ABOUT THE ORGANIZER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <TextView
+        android:layout_width="262dp"
+        android:layout_height="33dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:text="SFU Surge"
+        android:textColor="?attr/colorText"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.704"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.796" />
+
+    <TextView
+        android:layout_width="272dp"
+        android:layout_height="102dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:text="SFU Surge empowers students in tech to gain practical experience, create industry connections, and connect with designers, engineers and developers.t"
+        android:textColor="?attr/colorText"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="76dp"
+        android:layout_height="78dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865"
+        app:srcCompat="@drawable/surgelogo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
